@@ -155,6 +155,25 @@ LIMIT 5;
 - [ ] Set up CloudWatch monitoring
 - [ ] Automate with Lambda triggers
 
+## 🐛 Challenges & Solutions
+
+### Challenge: Glue Crawler LOCATION Configuration
+
+**Issue:** Initial Crawler setup pointed table LOCATION to the CSV file itself (`s3://bucket/file.csv`) instead of the folder.
+
+**Why it's a problem:** 
+- Prevents adding more data files
+- Breaks partitioning
+- Not production-ready
+
+**Solution:**
+- Reconfigured Crawler to point to folder (`s3://bucket/folder/`)
+- Deleted old table from Data Catalog
+- Re-ran Crawler to create correct table
+- Verified LOCATION property points to directory
+
+**Learning:** Data lake tables should always point to folders, not individual files. This allows horizontal scaling - you can add thousands of files to the same folder and query them as one table.
+
 ## 🔗 Connect
 
 - **LinkedIn:** [linkedin.com/in/sanchit-data-engineer](https://linkedin.com/in/sanchit-data-engineer)
