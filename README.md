@@ -134,6 +134,38 @@ GROUP BY product
 ORDER BY revenue DESC
 LIMIT 5;
 ```
+## Technology Comparison: Athena vs Redshift
+
+**For this project, I chose Athena over Redshift because:**
+- Ad-hoc analysis workload
+- Small dataset (15 rows)
+- No need for repeated queries
+- Cost optimization (pay-per-query model)
+
+**When I would use Redshift instead:**
+- Production BI dashboards (Tableau, Power BI)
+- Repeated complex queries on large datasets
+- Need for sub-second performance
+- Predictable query patterns
+
+**Redshift Advantages I Understand:**
+- Columnar storage with compression
+- Massively parallel processing (MPP)
+- Result caching for repeated queries
+- Advanced query optimization
+- COPY command for bulk loading
+- Workload management (WLM) for resource allocation
+
+**Skills Transfer:**
+Both Athena and Redshift use:
+- Standard SQL (PostgreSQL-compatible)
+- Columnar storage principles
+- S3 integration
+- AWS ecosystem
+- Query optimization techniques
+
+This architectural decision demonstrates understanding of 
+cost-benefit tradeoffs in data platform design.
 
 ## 💰 Cost Breakdown
 
