@@ -102,13 +102,13 @@ Executed analytical queries:
 ## 📸 Screenshots
 
 ### S3 Data Lake
-[Add screenshot of S3 bucket with CSV file]
+![S3 Bucket](screenshots/s3-bucket.png)
 
 ### Glue Data Catalog
-[Add screenshot of Glue table schema]
+![Glue Catalog](screenshots/glue-catalog.png)
 
 ### Athena Query Results
-[Add screenshot of SQL query and results]
+![Athena Query](screenshots/athena-query.png)
 
 ## 🔧 Sample Queries
 
